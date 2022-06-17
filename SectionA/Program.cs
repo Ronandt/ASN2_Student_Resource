@@ -9,25 +9,18 @@ namespace EmployeeFileStorer
         public static List<Employee> ReadHRMasterList()
         {
             HRProcessor hrProcessor = new HRProcessor(@"HRMasterlist.txt");
-            return hrProcessor.ReadTextFile();
+            return hrProcessor.ReadTextFileConverter();
         }
 
         
   
         public static void Main(string[] args)
         {
-
-            
-            
-
             List<Employee> masterList = ReadHRMasterList();
             InvokeGenerateInfoMethods invokeAllGenerateInfoMethods = IT.GenerateInfoForITDepartment;
             invokeAllGenerateInfoMethods += Procurement.GenerateInfoForProcurement;
             invokeAllGenerateInfoMethods += CorpAdmin.GenerateInfoForCorpAdmin;
             invokeAllGenerateInfoMethods.Invoke(masterList);
-
-
-
         }
 
 

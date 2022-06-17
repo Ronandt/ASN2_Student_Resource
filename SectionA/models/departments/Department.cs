@@ -1,6 +1,6 @@
 namespace EmployeeFileStorer
 {
-     abstract class Department : ITextWriter
+    public abstract class Department : ITextWriter
     {
         public static void WriteToTextFile(string writeFilePath, string content)
         {
