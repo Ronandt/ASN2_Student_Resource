@@ -4,18 +4,42 @@ namespace EmployeeFileStorer
 {
     public class Program
     {
+
+
+        public static List<Employee> ReadHRMasterList()
+        {
+            HRProcessor hr = new HRProcessor(@"HRMasterlist.txt");
+            return hr.ReadTextFile();
+        }
+
+
         public static void Main(string[] args)
         {
-            Console.WriteLine(String.Join("||", HRProcessor.ReadHRMasterList()));
+            List<Employee> masterList = ReadHRMasterList();
+            IT.GenerateInfo(masterList);
+            Procurement.GenerateInfo(masterList);
+            CorpAdmin.GenerateInfo(masterList);
+
         }
+
+
+
+
     }
 
-    public class HRProcessor
+    public class HRProcessor : IReadEmployees
     {
-        public static List<Employee>? ReadHRMasterList()
+
+        public HRProcessor(string path)
         {
-            string path = @"HRMasterlist.txt";
-            return File.Exists(path) ? File.ReadAllText(path).Split(Environment.NewLine).Select(employeeString =>
+            Path = path;
+        }
+
+
+        public List<Employee>? ReadTextFile()
+        {
+
+            return File.Exists(Path) ? File.ReadAllText(Path).Split(Environment.NewLine).Select(employeeString =>
                 {
                     return (Employee)Activator.CreateInstance(typeof(Employee), args: (object[])(employeeString.Split("|")))!;
                 }).ToList() : null;
@@ -23,6 +47,14 @@ namespace EmployeeFileStorer
 
         }
 
-        
+        public string Path { get; set; }
+
+
+
+
+
+
+
+
     }
 }

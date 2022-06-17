@@ -34,9 +34,6 @@ namespace EmployeeFileStorer
         public string CorpAdmin()
         {
 
-
-
-
             return $"{this.FullName},{this.Designation},{this.Department}";
         }
 
