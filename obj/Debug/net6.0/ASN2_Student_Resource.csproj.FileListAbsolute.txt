@@ -1,0 +1,15 @@
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\bin\Debug\net6.0\ASN2_Student_Resource.exe
+c:\Users\decla\Documents\GitHub\ASN2_Student_Resource\bin\Debug\net6.0\ASN2_Student_Resource.deps.json
+c:\Users\decla\Documents\GitHub\ASN2_Student_Resource\bin\Debug\net6.0\ASN2_Student_Resource.runtimeconfig.json
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\bin\Debug\net6.0\ASN2_Student_Resource.dll
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\bin\Debug\net6.0\ASN2_Student_Resource.pdb
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.csproj.AssemblyReference.cache
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.AssemblyInfoInputs.cache
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.AssemblyInfo.cs
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.csproj.CoreCompileInputs.cache
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.dll
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\refint\ASN2_Student_Resource.dll
+C:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.pdb
+c:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ASN2_Student_Resource.genruntimeconfig.cache
+c:\Users\decla\Documents\GitHub\ASN2_Student_Resource\obj\Debug\net6.0\ref\ASN2_Student_Resource.dll
