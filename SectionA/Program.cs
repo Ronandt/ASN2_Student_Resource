@@ -8,7 +8,7 @@ namespace EmployeeFileStorer
 
         public static List<Employee> ReadHRMasterList()
         {
-            HRProcessor hrProcessor = new HRProcessor(@"HRMasterlist.txt");
+            FileProcessor hrProcessor = new FileProcessor(@"HRMasterlist.txt");
             return hrProcessor.ReadTextFileConverter();
         }
 

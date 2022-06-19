@@ -1,16 +1,10 @@
+using CalculatePayroll;
 namespace EmployeeFileStorer
 {
-    public abstract class Department : ITextWriter
+    public abstract class Department : IPresentInformation<List<Employee>>
     {
-        public static void WriteToTextFile(string writeFilePath, string content)
-        {
-            if (!File.Exists(writeFilePath))
-            {
-                using (StreamWriter sw = File.CreateText(writeFilePath))
-                {
-                    sw.WriteLine(content);
-                }
-            }
+        public virtual void PresentInformation(List<Employee> employees) {
+            Console.WriteLine(String.Join("\n", employees.Select(employee => employee.ToString())));
         }
     }
 }

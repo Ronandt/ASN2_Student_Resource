@@ -4,8 +4,8 @@ namespace EmployeeFileStorer
     {
         public static void GenerateInfoForCorpAdmin(List<Employee> content)
         {
-       string contentSelected = String.Join("\n", content.Select(x => x.CorpAdmin()).ToList());
-            Department.WriteToTextFile("CorporateAdmin.txt", contentSelected);
+            string contentSelected = String.Join("\n", content.Select(x => x.CorpAdmin()).ToList());
+            FileProcessor.WriteToTextFile("CorporateAdmin.txt", contentSelected);
         }
     }
 
