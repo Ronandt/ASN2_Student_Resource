@@ -10,7 +10,11 @@ namespace EmployeeFileStorer
 
         public List<Employee>? ReadTextFileConverter()
         {
-            return File.Exists(Path) ? File.ReadAllText(Path).Split(Environment.NewLine).Select(employeeString => { return (Employee)Activator.CreateInstance(typeof(Employee), args: (object[])(employeeString.Split("|")))!; }).ToList() : null;
+            if(File.Exists(Path)) {
+                return  File.ReadAllText(Path).Split(Environment.NewLine).Select(employeeString => { return (Employee)Activator.CreateInstance(typeof(Employee), args: (object[])(employeeString.Split("|")))!; }).ToList(); 
+            }
+            throw new FileNotFoundException("Unable to find the file! Please create the file.");
+           
         }
         
             public static void WriteToTextFile(string writeFilePath, string content)
@@ -21,6 +25,8 @@ namespace EmployeeFileStorer
                 {
                     sw.WriteLine(content);
                 }
+            } else {
+                Console.WriteLine($"{writeFilePath} already exists.");
             }
         }
         public string Path { get; set; }
