@@ -1,7 +1,7 @@
 
 namespace EmployeeFileStorer
 {
-    public class Employee
+    public class Employee : ICorpAdminStringable, IProcurementStringable, IITStringable
     {
         private DateTime _startDate;
         public Employee(string nric, string fullName, string salutation, string startDate, string designation, string department, string mobileNo, string hireType, string salary)
@@ -36,18 +36,18 @@ namespace EmployeeFileStorer
         public string? Salary { get; set; }
         public double MonthlyPayout { get; set; }
 
-        public string CorpAdmin()
+        public string CorpAdminString()
         {
 
             return $"{this.FullName},{this.Designation},{this.Department}";
         }
 
-        public string Procurement()
+        public string ProcurementString()
         {
             return $"{this.Salutation},{this.FullName},{this.MobileNo},{this.Designation},{this.Department}";
         }
 
-        public string ITDepartment()
+        public string ITString()
         {
             return $"{this.Nric},{this.FullName},{this.StartDate},{this.Department},{this.MobileNo}";
         }

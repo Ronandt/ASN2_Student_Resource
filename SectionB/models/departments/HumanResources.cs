@@ -12,6 +12,11 @@ namespace CalculatePayroll
             return employees;
         }
 
+        public async Task<List<Employee>?> ProcessPayrollAsync() {
+            List<Employee>? asyncResult = await Task.Run(() => this.ProcessPayroll());
+            return asyncResult;
+        }
+
         public void UpdateMonthlyPayoutToMasterList(List<Employee> employee)
         {
          
