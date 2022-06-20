@@ -12,6 +12,8 @@ def main():
 
     #option 3 (Second shortest, inefficient but statementless)
     print(sum(map(lambda x : (int(x.split("|")[-2]) * ((x.split("|")[7] == "FullTime") + (int(x.split("|")[3].split("/")[-1]) > 1995) == 2) * 0.85), open("HRMasterlistB.txt", "r").read().split("\n")[:-1])))
-  
+
+    #option 4 (third shortest, one statement, but one func and most efficient)
+    print(__import__("functools").reduce(lambda a, b: (c:=b.split("|"),  a+  int(c[-2]) * ((c[7] == "FullTime") + (int(c[3].split("/")[-1]) > 1995) == 2) * 0.85)[1],  open("HRMasterlistB.txt", "r").read().split("\n")[:-1], 0 ))
     
 main()
