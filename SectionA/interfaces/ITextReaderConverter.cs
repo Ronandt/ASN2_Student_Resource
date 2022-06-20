@@ -1,5 +1,5 @@
 namespace EmployeeFileStorer {
-    interface ITextReaderConverter<T> {
+    interface ITextReaderConvertable<T> {
         public T ReadTextFileConverter ();
     }
 }

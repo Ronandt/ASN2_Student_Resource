@@ -1,5 +1,5 @@
 namespace EmployeeFileStorer {
-    interface ITextWriter {
+    interface ITextWritable {
         public static void WriteToTextFile() {
             
             

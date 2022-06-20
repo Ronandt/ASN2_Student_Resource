@@ -1,6 +1,6 @@
 namespace EmployeeFileStorer
 {
-    public class FileProcessor : ITextReaderConverter<List<Employee>>, ITextWriter {
+    public class FileProcessor : ITextReaderConvertable<List<Employee>>, ITextWritable {
 
         public FileProcessor(string path)
         {

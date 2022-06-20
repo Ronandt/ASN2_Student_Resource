@@ -1,6 +1,6 @@
 
 namespace CalculatePayroll {
-    interface IPresentInformation<T> {
+    interface IPresentable<T> {
         public void PresentInformation(T information) {
           
         }
