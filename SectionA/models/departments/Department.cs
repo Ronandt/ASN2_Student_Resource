@@ -1,10 +1,8 @@
 using CalculatePayroll;
 namespace EmployeeFileStorer
 {
-    public abstract class Department : IPresentable<List<Employee>>
+    public abstract class Department 
     {
-        public virtual void PresentInformation(List<Employee> employees) {
-            Console.WriteLine(String.Join("\n", employees.Select(employee => employee.ToString())));
-        }
+        //For possible future implmentation :)
     }
 }

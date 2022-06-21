@@ -3,12 +3,18 @@ namespace CalculatePayroll
 {
     class InitalisePayrollOperation
     {
-        public async static Task Start(HumanResources HR)
-        {
-            var payroll = await HR.ProcessPayrollAsync("HRMasterlist.txt");
-            HR.PresentInformation(payroll);
-            HR.UpdateMonthlyPayoutToMasterList(payroll);
 
+        private readonly IPayrollShowcasable _payrollShowcasable;
+
+        public InitalisePayrollOperation(IPayrollShowcasable payrollShowcasable) {
+            _payrollShowcasable = payrollShowcasable;
+        }
+        public async Task Start()
+        {
+            var payroll = await _payrollShowcasable.ProcessPayrollAsync("HRMasterlist.txt");
+            _payrollShowcasable.PresentInformation(payroll);
+            _payrollShowcasable.UpdateMonthlyPayoutToMasterList(payroll);
+//dependency injection
         }
     }
 }

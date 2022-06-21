@@ -7,5 +7,7 @@ namespace CalculatePayroll
 
         public Task<List<Employee>?> ProcessPayrollAsync(string filePath);
 
+        public void UpdateMonthlyPayoutToMasterList(List<Employee> employee);
+
     }
 }

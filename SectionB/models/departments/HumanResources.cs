@@ -1,7 +1,7 @@
 using EmployeeFileStorer;
 namespace CalculatePayroll
 {
-    class HumanResources : Department, IManagePayroll
+    class HumanResources : Department, IPayrollShowcasable
     {
         public List<Employee>? ProcessPayroll(string filePath)
         {
@@ -23,7 +23,7 @@ namespace CalculatePayroll
             FileProcessor.WriteToTextFile("HRMasterlistB.txt", String.Join("\n", employee.Select(x => x.ToString())));
         }
 
-        public override void PresentInformation(List<Employee> employees)
+        public void PresentInformation(List<Employee> employees)
         {
 
             employees.ForEach(employee => Console.WriteLine($"{employee.FullName} ({employee.Nric})\n{employee.Designation}\n{employee.HireType} Payout: ${employee.MonthlyPayout}\n{String.Concat(Enumerable.Repeat("-", 20))}"));
