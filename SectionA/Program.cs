@@ -16,11 +16,7 @@ namespace EmployeeFileStorer
   
         public static void Main(string[] args)
         {
-            List<Employee> masterList = ReadHRMasterList();
-            InvokeGenerateInfoMethods invokeAllGenerateInfoMethods = IT.GenerateInfoForITDepartment;
-            invokeAllGenerateInfoMethods += Procurement.GenerateInfoForProcurement;
-            invokeAllGenerateInfoMethods += CorpAdmin.GenerateInfoForCorpAdmin;
-            invokeAllGenerateInfoMethods.Invoke(masterList);
+            GenerateAllInformation.AllDepartmentInformation(ReadHRMasterList());
         }
 
 

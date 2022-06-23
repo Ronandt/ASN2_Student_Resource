@@ -14,7 +14,7 @@ namespace CalculatePayroll
             var payroll = await _payrollShowcasable.ProcessPayrollAsync("HRMasterlist.txt");
             _payrollShowcasable.PresentInformation(payroll);
             _payrollShowcasable.UpdateMonthlyPayoutToMasterList(payroll);
-//dependency injection
+//strategy pattern
         }
     }
 }

@@ -4,7 +4,6 @@ namespace CalculatePayroll {
         public static async Task Main(string[] args) {
             InitalisePayrollOperation initalisePayrollOperation = new InitalisePayrollOperation(new HumanResources());
             await initalisePayrollOperation.Start();
-
         }
     }
 }
