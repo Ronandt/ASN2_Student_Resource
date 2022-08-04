@@ -1,4 +1,5 @@
 
+using EmployeeFileStorer;
 namespace CalculatePayroll
 {
     class InitalisePayrollOperation
@@ -11,10 +12,10 @@ namespace CalculatePayroll
         }
         public async Task Start()
         {
-            var payroll = await _payrollShowcasable.ProcessPayrollAsync("HRMasterlist.txt");
+            var payroll = await _payrollShowcasable.ProcessPayrollAsync(EmployeeFileStorer.Program.ReadHRMasterList());
             _payrollShowcasable.PresentInformation(payroll);
             _payrollShowcasable.UpdateMonthlyPayoutToMasterList(payroll);
-//strategy pattern
+//strategy pattern/Depdency injeciton
         }
     }
 }

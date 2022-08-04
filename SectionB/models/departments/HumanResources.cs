@@ -3,18 +3,18 @@ namespace CalculatePayroll
 {
     class HumanResources : Department, IPayrollShowcasable
     {
-        public List<Employee>? ProcessPayroll(string filePath)
+        public List<Employee>? ProcessPayroll(List<Employee> employeesList)
         {
 
-            var employees = new FileProcessor(filePath).ReadTextFileConverter().Select(employees => { Enum.TryParse(employees.HireType, out HireTypeMonthlyPayoutPercentage monthlyPayoutPercentage); employees.MonthlyPayout = Int32.Parse(employees.Salary) * (double)monthlyPayoutPercentage / 100; return employees; }).ToList();
+            var employees = employeesList.Select(employees => { Enum.TryParse(employees.HireType, out HireTypeMonthlyPayoutPercentage monthlyPayoutPercentage); employees.MonthlyPayout = Int32.Parse(employees.Salary) * (double)monthlyPayoutPercentage / 100; return employees; }).ToList();
 
 
             return employees;
         }
 
-        public async Task<List<Employee>?> ProcessPayrollAsync(string filePath)
+        public async Task<List<Employee>?> ProcessPayrollAsync(List<Employee> employeesList)
         {
-            List<Employee>? asyncResult = await Task.Run(() => this.ProcessPayroll(filePath));
+            List<Employee>? asyncResult = await Task.Run(() => this.ProcessPayroll(employeesList));
             return asyncResult;
         }
 

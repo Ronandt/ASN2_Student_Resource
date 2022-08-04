@@ -1,7 +1,7 @@
 
 namespace EmployeeFileStorer
 {
-    public class Employee : ICorpAdminStringable, IProcurementStringable, IITStringable
+    public class Employee 
     {
         private DateTime _startDate;
         public Employee(string nric, string fullName, string salutation, string startDate, string designation, string department, string mobileNo, string hireType, string salary)

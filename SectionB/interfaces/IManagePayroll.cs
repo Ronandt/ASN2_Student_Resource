@@ -3,9 +3,9 @@ namespace CalculatePayroll
 {
     interface IManagePayroll
     {
-        public List<Employee>? ProcessPayroll(string filePath);
+        public List<Employee>? ProcessPayroll(List<Employee> employeesList);
 
-        public Task<List<Employee>?> ProcessPayrollAsync(string filePath);
+        public Task<List<Employee>?> ProcessPayrollAsync(List<Employee> employeesList);
 
         public void UpdateMonthlyPayoutToMasterList(List<Employee> employee);
 
