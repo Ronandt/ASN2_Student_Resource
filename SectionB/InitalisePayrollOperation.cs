@@ -1,5 +1,4 @@
 
-using EmployeeFileStorer;
 namespace CalculatePayroll
 {
     class InitalisePayrollOperation

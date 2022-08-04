@@ -1,7 +1,7 @@
 using EmployeeFileStorer;
 namespace CalculatePayroll
 {
-    class HumanResources : Department, IPayrollShowcasable
+    class HumanResources : IPayrollShowcasable
     {
         public List<Employee>? ProcessPayroll(List<Employee> employeesList)
         {

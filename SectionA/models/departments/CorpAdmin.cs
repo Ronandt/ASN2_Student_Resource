@@ -1,6 +1,6 @@
 namespace EmployeeFileStorer
 {
-    class CorpAdmin : Department
+    class CorpAdmin
     {
         public static void GenerateInfoForCorpAdmin(List<Employee> content)
         {

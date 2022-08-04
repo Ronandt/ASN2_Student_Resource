@@ -1,7 +1,7 @@
 namespace EmployeeFileStorer
 {
 
-    class IT : Department
+    class IT 
     {
         public static void GenerateInfoForITDepartment(List<Employee> content)
         {

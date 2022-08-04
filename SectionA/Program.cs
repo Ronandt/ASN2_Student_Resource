@@ -6,7 +6,7 @@ namespace EmployeeFileStorer
     {
 
 
-        public static List<Employee> ReadHRMasterList()
+        public static List<Employee>? ReadHRMasterList()
         {
             FileProcessor hrProcessor = new FileProcessor(@"HRMasterlist.txt");
             return hrProcessor.ReadTextFileConverter();
@@ -16,7 +16,7 @@ namespace EmployeeFileStorer
   
         public static void Main(string[] args)
         {
-            GenerateAllInformation.AllDepartmentInformation(ReadHRMasterList());
+            GenerateAllInformation.AllDepartmentInformation(ReadHRMasterList()!);
         }
 
 
