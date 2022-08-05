@@ -1,0 +1,3 @@
+Recommended for neatness: Current directory should be ASN2_Student_Resource for shard txt file generation of all section a,b,c instead of e.g ASN2_Student_Resource/sectionC
+Run section A -> dotnet run --project sectionA
+Run section b -> dotnet run --project sectionB

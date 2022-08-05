@@ -3,7 +3,7 @@ namespace CalculatePayroll
 {
     class HumanResources : IPayrollShowcasable
     {
-        public List<Employee>? ProcessPayroll(List<Employee> employeesList)
+        public List<Employee>? ProcessPayroll(List<Employee> employeesList) //Classes with the possibility of Async should implmenet Synchronous and Asynchronous methods in both cases. Methods with async should put "Async" behind the method name
         {
 
             var employees = employeesList.Select(employees => { Enum.TryParse(employees.HireType, out HireTypeMonthlyPayoutPercentage monthlyPayoutPercentage); employees.MonthlyPayout = Int32.Parse(employees.Salary) * (double)monthlyPayoutPercentage / 100; return employees; }).ToList();
