@@ -57,10 +57,6 @@ namespace EmployeeFileStorer
             return String.Join("|", (this.GetType()).GetProperties().Select(property => property.GetValue(this, null)).Where(val => val != null));
         }
 
-        /*public static double ProcessPayroll() {
-
-        }*/
-
 
 
 

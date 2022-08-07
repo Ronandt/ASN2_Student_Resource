@@ -7,17 +7,18 @@ namespace CalculatePayroll
         {
 
             var employees = employeesList.Select(
-              employees => {
-             Enum.TryParse(employees.HireType, out HireTypeMonthlyPayoutPercentage monthlyPayoutPercentage);
-             employees.MonthlyPayout = Int32.Parse(employees.Salary!) * (double)monthlyPayoutPercentage / 100; 
-             return employees; 
-             }).ToList();
+              employees =>
+              {
+                  Enum.TryParse(employees.HireType, out HireTypeMonthlyPayoutPercentage monthlyPayoutPercentage);
+                  employees.MonthlyPayout = Int32.Parse(employees.Salary!) * (double)monthlyPayoutPercentage / 100;
+                  return employees;
+              }).ToList();
 
 
             return employees;
         }
 
-        public async Task<List<Employee>?> ProcessPayrollAsync(List<Employee> employeesList)
+        public async Task<List<Employee>?> ProcessPayrollAsync(List<Employee> employeesList) //Convention to c# that async methods should have "Async" behind 
         {
             List<Employee>? asyncResult = await Task.Run(() => this.ProcessPayroll(employeesList));
             return asyncResult;
