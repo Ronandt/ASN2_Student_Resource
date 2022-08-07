@@ -25,7 +25,7 @@ namespace EmployeeFileStorer
 
         public string StartDate
         {
-            get => _startDate.ToString("dd/MM/yyyy");
+            get => _startDate.ToString("dd/mm/yyyy");
             set => _startDate = DateTime.ParseExact(value, "dd/mm/yyyy", System.Globalization.CultureInfo.InvariantCulture);
         }
         public string? Designation { get; set; }

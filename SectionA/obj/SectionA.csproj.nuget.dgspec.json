@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\sectionA\\SectionA.csproj": {}
+    "c:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\SectionA\\SectionA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\sectionA\\SectionA.csproj": {
+    "c:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\SectionA\\SectionA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\sectionA\\SectionA.csproj",
+        "projectUniqueName": "c:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\SectionA\\SectionA.csproj",
         "projectName": "SectionA",
-        "projectPath": "C:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\sectionA\\SectionA.csproj",
+        "projectPath": "c:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\SectionA\\SectionA.csproj",
         "packagesPath": "C:\\Users\\decla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\sectionA\\obj\\",
+        "outputPath": "c:\\Users\\decla\\Documents\\GitHub\\ASN2_Student_Resource\\SectionA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\decla\\AppData\\Roaming\\NuGet\\NuGet.Config",
